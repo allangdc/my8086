@@ -39,6 +39,51 @@ union FLAG {
 	};
 };
 
+struct pins {
+	unsigned AD0 : 1;
+	unsigned AD1 : 1;
+	unsigned AD2 : 1;
+	unsigned AD3 : 1;
+	unsigned AD4 : 1;
+	unsigned AD5 : 1;
+	unsigned AD6 : 1;
+	unsigned AD7 : 1;
+	unsigned AD8 : 1;
+	unsigned AD9 : 1;
+	unsigned AD10 : 1;
+	unsigned AD11 : 1;
+	unsigned AD12 : 1;
+	unsigned AD13 : 1;
+	unsigned AD14 : 1;
+	unsigned AD15 : 1;
+	unsigned AD16 : 1;
+	unsigned AD17 : 1;
+	unsigned AD18 : 1;
+	unsigned AD19 : 1;
+	unsigned NMI : 1;
+	unsigned INTR : 1;
+	unsigned CLK : 1;
+	union {
+		unsigned MN : 1;
+		unsigned MX_ : 1;
+	}
+	unsigned RD_ : 1;
+	union {
+		unsigned RQ : 1;
+		unsigned GT0 : 1;
+	};
+	unsigned RQ_GT1 : 1;
+	unsigned LOCK : 1;
+	unsigned S2 : 1;
+	unsigned S1 : 1;
+	unsigned S0 : 1;
+	unsigned QS0 : 1;
+	unsigned QS1 : 1;
+	unsigned TEST : 1;
+	unsigned READY : 1;
+	unsigned RESET : 1;
+};
+
 
 class ic8086 {
 public:
@@ -62,6 +107,8 @@ public:
 	unsigned short	DS;
 	unsigned short	ES;
 	unsigned short	SS;
+
+	struct pins PINS;
 };
 
 #endif /* IC8086_H_ */

@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <cstdlib>
 #include "ic8086.h"
 
 int main(int argc, char **argv)
@@ -15,6 +16,7 @@ int main(int argc, char **argv)
 	ic.FLAGS.X = 0;
 	ic.FLAGS.A = 1;
 	std::cout << (unsigned int) ic.FLAGS.X << std::endl;
+	system("PAUSE");
 	return (0);
 }
 

@@ -9,11 +9,15 @@
 #define MEMORY_H_
 
 #include <vector>
+#include "Device.h"
 
-class Memory {
+class Memory : public Device {
 public:
 	Memory();
 	virtual ~Memory();
+private:
+	unsigned char *data;
+	int size;
 };
 
 #endif /* MEMORY_H_ */

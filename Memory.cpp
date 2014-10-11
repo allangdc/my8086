@@ -8,11 +8,11 @@
 #include "Memory.h"
 
 Memory::Memory() {
-	// TODO Auto-generated constructor stub
-
+	size = 65536;
+	data = new unsigned char[size];
 }
 
 Memory::~Memory() {
-	// TODO Auto-generated destructor stub
+	delete [] data;
 }
 
