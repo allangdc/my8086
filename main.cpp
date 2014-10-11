@@ -12,9 +12,9 @@ int main(int argc, char **argv)
 {
 	ic8086 ic;
 	ic.regA.X = 0x0907;
-	ic.FLAGS = 0;
+	ic.FLAGS.X = 0;
 	ic.FLAGS.A = 1;
-	std::cout << (unsigned int) ic.FLAGS << std::endl;
+	std::cout << (unsigned int) ic.FLAGS.X << std::endl;
 	return (0);
 }
 
