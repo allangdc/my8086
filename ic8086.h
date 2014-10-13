@@ -66,7 +66,7 @@ struct pins {
 	union {
 		unsigned MN : 1;
 		unsigned MX_ : 1;
-	}
+	};
 	unsigned RD_ : 1;
 	union {
 		unsigned RQ : 1;
